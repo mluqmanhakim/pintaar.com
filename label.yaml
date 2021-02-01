@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-server-with-labels
+spec:
+  selector:
+    matchLabels:
+      app: web-server-with-labels
+  template:
+    metadata:
+      labels:
+        app: web-server-with-labels
+    spec:
+      containers:
+      - name: web-server-with-labels
+        image: nginx:alpine
+        ports:
+        - containerPort: 8000

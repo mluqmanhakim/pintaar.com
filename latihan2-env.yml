@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-env
+data:
+  POSTGRES_DB: database-k8s
+  POSTGRES_USER: superadmin
+  POSTGRES_PASSWORD: admin123

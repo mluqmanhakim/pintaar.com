@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kalkulator
+spec:
+  selector:
+    matchLabels:
+      app: kalkulator
+  template:
+    metadata:
+      labels:
+        app: kalkulator
+    spec:
+      containers:
+      - name: kalkulator
+        image: adityaudi/frontend:contoh
+        ports:
+        - containerPort: 8080
